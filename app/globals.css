@@ -58,3 +58,73 @@
  .trade-sidebar{order:2;width:100%;position:static}
  .chart-wrap{height:220px}
 }
+
+
+/* Reference-inspired full-screen practice terminal */
+:root{--bg:#151a2b;--panel:#1a2033;--panel2:#20263a;--line:#2b3248;--muted:#85899a;--text:#f4f5fa;--green:#08b847;--red:#d94a3b}
+html,body{height:100%;overflow:hidden;background:#151a2b}
+.app-shell{height:100dvh;min-height:0;overflow:hidden;background:#151a2b;display:flex;flex-direction:column}
+.topbar{height:82px;min-height:82px;margin-left:84px;padding:0 20px;gap:22px;background:#1a2032;border-bottom:1px solid #30364a}
+.brand{font-size:18px}.brand-mark{background:#28314a;color:#dce4f7}.top-nav{display:none}
+.top-actions{gap:16px}.feed-status{font-size:11px;color:#888d9e}.icon-btn{background:#252c40;border:0}
+.profile{font-size:11px;color:#aeb2c0}.avatar{background:#293451}
+.safety-banner{display:none}
+.workspace{position:relative;flex:1;min-height:0;height:auto;max-height:none;margin-left:84px;padding:10px 16px 6px;grid-template-columns:minmax(0,1fr) 228px;grid-template-rows:82px minmax(0,1fr);gap:10px;overflow:hidden}
+.asset-sidebar{grid-column:1;grid-row:1;display:flex;align-items:center;gap:10px;padding:7px 10px;border:0;border-radius:0;background:#1b2236;min-width:0;overflow:hidden}
+.asset-sidebar .panel-heading{margin:0;flex:none}
+.asset-sidebar .panel-heading .eyebrow,.asset-sidebar .panel-heading h2,.asset-sidebar .panel-heading .icon-btn,.asset-sidebar .search-box,.asset-sidebar .sidebar-foot{display:none}
+.asset-sidebar .panel-heading:after{content:"☰   ＋";white-space:pre;font-size:25px;color:#f2f3f8}
+.asset-list{display:flex;align-items:stretch;gap:0;margin:0;min-width:0;overflow-x:auto;flex:1;height:100%}
+.asset-row{min-width:155px;width:155px;flex:none;padding:8px 10px;border:0;border-right:1px solid #30364a;border-radius:0;background:transparent;gap:8px}
+.asset-row.selected{background:#282f43;border:0;border-bottom:3px solid #f4f5fa;border-radius:0}
+.asset-icon{width:35px;height:35px;border-radius:50%;background:#263653;color:#f2f4fa;font-size:15px}
+.asset-meta{gap:4px}.asset-meta strong{font-size:13px}.asset-meta small{font-size:10px;max-width:76px}
+.asset-quote{display:none}.star-btn{display:none}
+.center-column{grid-column:1;grid-row:2;min-height:0;height:100%;gap:8px}
+.market-summary{min-height:54px;padding:8px 14px;border:0;border-radius:0;background:#171d2f}
+.market-summary .eyebrow{display:none}.market-summary h1{font-size:16px}.market-summary p{display:none}
+.market-tag{background:#282f43;color:#8f93a3}
+.market-price strong{font-size:19px;color:#f2f3f8}.market-price span{font-size:10px}
+.chart-panel{flex:1;min-height:0;display:flex;flex-direction:column;padding:7px 10px 6px;border:0;border-radius:0;background:#171d2f}
+.chart-toolbar{min-height:30px}.chart-title .eyebrow{display:none}.chart-title strong{font-size:12px}
+.chart-controls button{color:#8e93a5;font-size:11px;padding:5px 9px}.chart-controls .time-active{background:#343b50;color:#fff}
+.chart-legend{margin-top:5px;font-size:9px}
+.chart-wrap{height:auto;flex:1;min-height:0;margin-top:5px;padding-left:36px;padding-bottom:22px}
+.chart-grid{inset:0 0 22px 0;color:#8a8fa0;font-size:10px}
+.chart-grid span{border-bottom:1px dashed #353c50}
+.price-chart{left:36px;width:calc(100% - 36px);height:calc(100% - 22px)}
+.chart-times{left:36px;color:#969aaa;font-size:10px}
+.indicator-row{padding-top:7px;gap:18px;border-color:#30364a;font-size:10px}
+.indicator-note{display:none}
+.trade-table{max-height:118px;flex:none;border:0;border-radius:0;background:#171d2f}
+.table-head{padding:8px 12px 0}.tab-switch button{font-size:10px;padding-bottom:8px}
+.table-caption{font-size:9px}th{padding:7px 10px;font-size:8px}td{padding:8px 10px;font-size:9px}
+.trade-sidebar{grid-column:2;grid-row:1/3;height:100%;min-height:0;overflow:auto;position:static;padding:12px;border:0;border-radius:0;background:#1a2032}
+.trade-sidebar .panel-heading{margin-bottom:10px}.trade-sidebar .panel-heading h2{font-size:14px}
+.balance-card{padding:12px;border:0;border-radius:7px;background:#252c40}
+.balance-label{font-size:9px}.balance-card>strong{font-size:22px;margin:8px 0}
+.balance-bottom{font-size:9px}
+.field-block{margin-top:13px}.field-label{margin-bottom:7px}.field-label label{font-size:10px}.field-label>span{font-size:8px}
+.amount-input{height:40px;background:#252c40;border:0;border-radius:7px}.amount-input input{font-size:15px}
+.quick-amounts button,.duration-options button{background:#252c40;border-color:#353c50}
+.payout-card{margin-top:12px;padding:10px;background:transparent;border:0;border-radius:0;grid-template-columns:1fr 1fr}
+.payout-card span{font-size:9px}.payout-card strong{font-size:22px;color:#08b847}.payout-return strong{font-size:16px;color:#fff}
+.payout-card small{display:none}
+.trade-button{height:92px;margin-top:12px;border-radius:10px;padding:0 16px;gap:14px}
+.trade-button strong{font-size:21px}.trade-button small{font-size:9px}.trade-button kbd{display:none}
+.trade-button svg{width:25px;height:25px}
+.up-button{background:#08b847;color:white}.down-button{background:#d94a3b;color:white}
+.notice{margin-top:10px;padding:8px;background:#252c40;font-size:8px}
+.panel-disclaimer{font-size:8px;margin-top:8px}
+.footer{height:34px;min-height:34px;margin-left:84px;padding:0 18px 5px;align-items:center;background:#171d2f;color:#a2a6b5}
+.footer>span:first-child{display:none}.footer>span:last-child{display:none}
+.footer:before{content:"◉      ♟       2m          1m          1D          3H          1H          30m          15m          5m";font:12px 'DM Mono',monospace;color:#a8adbd;word-spacing:10px}
+.app-shell:before{content:"☰\A\A▣\A\A▥\A\A⚑\A\A♙\A\A▱\A\A▤";white-space:pre;position:fixed;z-index:10;left:0;top:0;bottom:0;width:84px;padding:24px 26px;background:#1b2235;color:#9da2b3;font-size:27px;line-height:2.25;border-right:1px solid #30364a}
+@media(max-width:760px){
+ html,body{height:auto;overflow:auto}.app-shell{height:auto;min-height:100dvh;overflow:visible}
+ .topbar{margin-left:0;height:58px;min-height:58px;padding:0 12px}.workspace{margin-left:0;height:auto;max-height:none;overflow:visible;display:flex;flex-direction:column;padding:9px;gap:9px}
+ .asset-sidebar{order:0;width:100%;min-height:66px}.asset-sidebar .panel-heading:after{font-size:20px}.asset-list{overflow-x:auto}.asset-row{min-width:130px;width:130px}
+ .center-column{order:1;width:100%;height:auto}.chart-panel{min-height:340px}.chart-wrap{height:240px;min-height:240px}
+ .trade-sidebar{order:2;width:100%;height:auto;overflow:visible}.trade-button{height:62px}.footer{margin-left:0}
+ .app-shell:before{display:none}.footer:before{word-spacing:3px;font-size:9px}
+}
