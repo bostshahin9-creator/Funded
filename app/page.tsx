@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Activity, Bell, ChevronDown, Clock3, Crosshair, History, LayoutDashboard, Search, Settings2, ShieldCheck, Star, TrendingUp, Wallet, Wifi } from "lucide-react";
+import { Activity, Bell, ChevronDown, Clock3, Crosshair, History, LayoutDashboard, Search, Settings2, ShieldCheck, Star, TrendingUp, Wallet, Wifi, Menu, Plus, BriefcaseBusiness, ChartNoAxesColumn, Megaphone, Award, GraduationCap, MessageCircle, Info } from "lucide-react";
 
 type Asset = { symbol: string; name: string; price: number; change: number; payout: number; decimals: number; };
 type Trade = { id: number; symbol: string; direction: "UP" | "DOWN"; amount: number; entry: number; expiryAt: number; duration: number; result?: "WIN" | "LOSS" | "TIE"; close?: number; profit?: number; };
@@ -101,10 +101,10 @@ export default function Home() {
       <header className="topbar">
         <div className="brand"><div className="brand-mark"><Activity size={19}/></div><span>funded<span className="brand-dot">.</span></span><span className="demo-pill">DEMO</span></div>
         <nav className="top-nav"><button className="nav-active"><LayoutDashboard size={16}/> Terminal</button><button onClick={() => setTab("history")}><History size={16}/> History</button></nav>
-        <div className="top-actions"><span className="feed-status"><span className="pulse"/> PRACTICE ACCOUNT</span><button className="icon-btn" aria-label="Notifications"><Bell size={18}/></button><div className="profile"><div className="avatar">D</div><span>Demo account</span><ChevronDown size={14}/></div></div>
+        <div className="top-actions"><div className="header-balance"><strong>{money(balance)}</strong><small>PRACTICE ACCOUNT</small></div><button className="account-chevron" aria-label="Account options"><ChevronDown size={20}/></button><span className="virtual-account">VIRTUAL ONLY</span></div>
       </header>
 
-      <div className="safety-banner"><ShieldCheck size={15}/> Educational practice simulator · Virtual funds only · No deposits or withdrawals · Prices are randomly simulated, not live market quotes</div>
+      <aside className="left-rail" aria-label="Main navigation"><button className="rail-menu" aria-label="Menu"><Menu size={27}/></button><button aria-label="Portfolio"><BriefcaseBusiness size={24}/></button><button aria-label="Statistics"><ChartNoAxesColumn size={25}/></button><button aria-label="Announcements"><Megaphone size={25}/></button><button aria-label="Achievements"><Award size={25}/></button><button aria-label="Learning"><GraduationCap size={26}/></button><button aria-label="Messages"><MessageCircle size={25}/></button><button className="rail-info" aria-label="Information"><Info size={21}/></button></aside>
 
       <section className="workspace">
         <aside className="asset-sidebar panel">
