@@ -169,3 +169,30 @@ html,body{height:100%;overflow:hidden;background:#151a2b}
  .trade-sidebar .trade-button{height:78px}
  .trade-sidebar .field-block{margin-top:10px}
 }
+
+
+/* Final desktop composition: compact left rail, market tabs, chart and virtual order panel */
+@media (min-width:761px){
+  .topbar{margin-left:84px;height:82px;min-height:82px;justify-content:flex-end;padding:0 20px;background:#1a2032}
+  .top-actions:before{content:none!important}
+  .header-balance{display:flex;flex-direction:column;align-items:flex-end;gap:3px;margin-right:4px}
+  .header-balance strong{font:700 20px 'DM Mono',monospace;color:#f08a22}
+  .header-balance small{font:9px Manrope,Arial,sans-serif;color:#888d9e;letter-spacing:.5px}
+  .account-chevron{width:48px;height:48px;border:0;border-radius:12px;background:#252c40;color:#aeb4c4}
+  .virtual-account{height:48px;min-width:150px;display:grid;place-items:center;border:1px solid #08b847;border-radius:13px;color:#08b847;font-weight:700;font-size:14px;letter-spacing:.3px}
+  .left-rail{position:fixed;z-index:20;left:0;top:0;bottom:0;width:84px;background:#1b2235;border-right:1px solid #30364a;display:flex;flex-direction:column;align-items:center;padding:18px 0 12px;gap:22px}
+  .left-rail button{width:54px;height:48px;border:0;background:transparent;color:#9298aa;display:grid;place-items:center;border-radius:9px}
+  .left-rail button:hover{background:#2a3248;color:#fff}
+  .left-rail .rail-menu{height:58px;color:#fff;border-bottom:1px solid #5b6274;border-radius:0;margin-bottom:2px}
+  .left-rail .rail-info{margin-top:auto}
+  .app-shell:before{display:none!important;content:none!important}
+}
+@media (max-width:760px){
+  .left-rail{display:none}
+  .topbar{margin-left:0}
+  .top-actions:before{content:none!important}
+  .header-balance strong{font:700 14px 'DM Mono',monospace;color:#f08a22}
+  .header-balance small{font-size:7px;color:#9298aa}
+  .account-chevron{display:none}
+  .virtual-account{height:34px;padding:0 8px;border:1px solid #08b847;border-radius:8px;color:#08b847;font-size:9px;display:grid;place-items:center}
+}
